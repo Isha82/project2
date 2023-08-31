@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css">
+    <title>Project Name</title>
+    <style>
+      h1{
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      h2{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      body{display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+.container{
+  max-width: 800px;
+  background: #fff;
+  width: 800px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.container form{
+  font-family: DejaVu Sans Mono, monospace;
+  padding: 30px 0 0 0;
+}
+.container form .form-row{
+  display: flex;
+  margin: 32px 0;
+}
+.container .text{
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  
+  -webkit-text-fill-color: transparent;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="head"><%= reqPatient.fullname %>'s File</h1>
+    <div class="ds"><h2 class="subhead">Full Name:</h2>
+      <p><%= reqPatient.fullname %></p></div>
+    <h2>Age:</h2>
+    <p><%= reqPatient.age %></p>
+    <% if(reqPatient.diseases){ %>
+    <h2>Diseases:</h2>
+    <p><%= reqPatient.diseases %></p>
+    <% } %>
+    <% if(reqPatient.Occupation){ %>
+      <h2>Occupation:</h2>
+    <p><%= reqPatient.Occupation %></p>
+    <% console.log(reqPatient.Occupation)%>
+    <% } %>
+    <% if(reqPatient.Insurance_Plan){ %>
+      <h2>Insurance_Plan:</h2>
+    <p><%= reqPatient.Insurance_Plan %></p>
+    <% console.log(reqPatient.Insurance_Plan)%>
+    <% } %>
+    <% if(reqPatient.Emergency_Contact_Person){ %>
+      <h2>Emergency_Contact_Person:</h2>
+    <p><%= reqPatient.Emergency_Contact_Person%></p>
+    <% console.log(reqPatient.Emergency_Contact_Person)%>
+    <% } %>
+    <% if(reqPatient.Address){ %>
+      <h2>Address:</h2>
+    <p><%= reqPatient.Address%></p>
+    <% console.log(reqPatient.Address)%>
+    <% } %>
+    <% if(reqPatient.Home_Phone){ %>
+      <h2>Home_Phone:</h2>
+    <p><%= reqPatient.Home_Phone%></p>
+    <% console.log(reqPatient.Home_Phone)%>
+    <% } %>
+    <% if(reqPatient.Cell_Phone){ %>
+      <h2>Cell_Phone:</h2>
+    <p><%= reqPatient.Cell_Phone%></p>
+    <% console.log(reqPatient.Cell_Phone)%>
+    <% } %>
+    <% if(reqPatient.Current_Height){ %>
+      <h2>Current_Height:</h2>
+    <p><%= reqPatient.Current_Height%></p>
+    <% console.log(reqPatient.Current_Height)%>
+    <% } %>
+    <% if(reqPatient.Current_Weight){ %>
+      <h2>Current_Weight:</h2>
+    <p><%= reqPatient.Current_Weight%></p>
+    <% console.log(reqPatient.Current_Weight)%>
+    <% } %>
+    <% if(reqPatient.Medications){ %>
+      <h2>Medications:</h2>
+    <p><%= reqPatient.Medications%></p>
+    <% console.log(reqPatient.Medications)%>
+    <% } %>
+    <% if(reqPatient.Surgeries){ %>
+      <h2> Surgeries:</h2>
+    <p><%= reqPatient.Surgeries%></p>
+    <% console.log(reqPatient.Surgeries)%>
+    <% } %>
+    <% if(reqPatient.Sleep){ %>
+      <h2>Sleep Hours:</h2>
+      <p><%= reqPatient.Sleep%></p>
+      <% console.log(reqPatient.Sleep)%>
+      <% } %>
+      <% if(reqPatient.Hospitalizations){ %>
+        <h2>Hospitalizations:</h2>
+        <p><%= reqPatient.Hospitalizations%></p>
+        <% console.log(reqPatient.Hospitalizations)%>
+        <% } %>
+        <% if(reqPatient.Exercise_hours){ %>
+          <h2>Exercise_hours:</h2>
+          <p><%= reqPatient.Exercise_hours%></p>
+          <% console.log(reqPatient.Exercise_hours)%>
+          <% } %>  
+          <% if(reqPatient.Allergies){ %>
+            <h2>Allergies:</h2>
+            <p><%= reqPatient.Allergies%></p>
+            <% console.log(reqPatient.Allergies)%>
+            <% } %> 
+            <% if(reqPatient.Others){ %>
+              <h2>Others:</h2>
+              <p><%= reqPatient.Others%></p>
+              <% console.log(reqPatient.Others)%>
+              <% } %> 
+
+
+    <a href="/patient/<%= reqPatient._id %>/edit"><button>Edit Info</button></a>
+    <a href="/login"><button>Back to Login</button></a>
+          </div></body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css">
+    <style>
+      h1{
+        text-align: center;
+        /* position: absolute; */
+        background-color: antiquewhite;
+      }
+      body{
+        
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      input{
+        border-radius:0ch;
+      }
+      label {
+  margin-bottom: 4px;
+}
+label:nth-of-type(2) {
+  margin-top: 12px;
+}
+input,textarea{
+  background: #79a9cd;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px;
+  padding-left: 0px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 20px;
+  box-shadow: inset 6px 6px 6px #628fbc, inset -6px -6px 6px rgb(231, 234, 234);
+}
+
+button {
+  color: white;
+  margin-top: 20px;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #88a8c8, -6px -6px 6px rgb(137, 170, 145);
+  transition: 0.5s;
+}
+ label, input,textarea, button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing:content-box;
+}
+
+      .container {
+  position: relative;
+  width:auto;
+  height:auto;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #e2cece;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+   </style>
+   
+    <title>Project Title</title>
+  </head>
+  <body>
+    <h1 >Signup</h1>
+    <form action="/signup" method="post">
+      <div class="container">
+        <div class="inputs">
+      <label for="fullname">Full Name: </label>
+      <input type="text" name="user[fullname]" id="fullname" required />
+      <br>
+      <label for="age">Age: </label>
+      <input type="number" name="user[age]" id="age" required min="0" />
+      <br>
+      <label for="diseases">Diseases: </label>
+      <input
+        type="text"
+        name="user[diseases]"
+        id="diseases"
+       
+      />
+      <br>
+      <label for="username">Username: </label>
+      <input
+        type="text"
+        name="user[username]"
+        id="username"
+
+        required
+      />
+      <br>
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        name="user[password]"
+        id="password"
+        required
+        minlength="8"
+      />
+      <br>
+      <label for="Occupation">Occupation: </label>
+      <input
+        type="text"
+        name="user[Occupation]"
+        id="Occupation"
+        required
+      />
+      <br>
+      <label for="Insurance_Plan">Insurance Plan: </label>
+      <textarea
+        type="text"
+        rows="4"
+        name="user[Insurance_Plan]"
+        id="Insurance_Plan"
+      ></textarea>
+      <br>
+      <label for=" Emergency_Contact_Person"> Emergency Contact Person: </label>
+      <input
+        type="text"
+        name="user[Emergency_Contact_Person]"
+        id=" Emergency_Contact_Person"
+      />
+      <br>
+      <label for="Address">Address: </label>
+      <textarea
+        type="text"
+        rows="4"
+        name="user[Address]"
+        id="Address"
+      ></textarea>
+      <br>
+      <label for="  Home_Phone">  Home Phone: </label>
+      <input
+        type="text"
+        name="user[Home_Phone]"
+        id=" Home_Phone"
+      />
+      <br>
+      <label for=" Cell_Phone"> Cell Phone: </label>
+      <input
+        type="text"
+        name="user[Cell_Phone]"
+        id="Cell_Phone"
+      />
+      <br>
+      <label  for=" Current_Height"> Current Height: </label>
+      <input
+        type="text"
+        name="user[Current_Height]"
+        id=" Current_Height"
+      />
+      <br>
+      <div class="we2">
+      <label for="Current_Weight"> Current Weight: </label>
+      <input
+        type="text"
+        name="user[Current_Weight]"
+        id="Current_Weight"
+      />
+      <div class="weslider">
+        <img src="/images/weslider.jpg">
+        <p id="currWeight">00</p>
+      </div>
+      </div>
+      <br>
+      <label for="Medications">Medications: </label>
+      <textarea
+        type="text"
+        name="user[Medications]"
+        id="Medications"
+        rows="4"
+      ></textarea>
+      <br>
+      <label for="Surgeries">Previous Surgeries: </label>
+      <textarea
+        type="text"
+        name="user[Surgeries]"
+        id="Surgeries"
+        rows="4"
+      ></textarea>
+      <br>
+      <label for="Sleep">Sleep Hours: </label>
+      <input
+        type="text"
+        name="user[Sleep]"
+        id="Sleep"
+      />
+      <br>
+      <label for=" Hospitalizations">Previous  Hospitalizations: </label>
+      <textarea
+        type="text"
+        name="user[Hospitalizations]"
+        id=" Hospitalizations"
+        rows="4"
+      ></textarea>
+      <br>
+      <label for="Exercise_hours">Exercise Hours: </label>
+      <input
+        type="text"
+        name="user[Exercise_hours]"
+        id="Exercise_hours"
+      />
+      <br>
+      <label for="Allergies">Allergies (if any): </label>
+      <textarea
+        type="text"
+        name="user[Allergies]"
+        id="Allergies"
+        rows="4"
+      ></textarea>
+      <br>
+      <label for="Others">Others (if any): </label>
+      <textarea
+        type="text"
+        name="user[Others]"
+        id="Others"
+        rows="4"
+      ></textarea>
+          </div>
+      <button>Submit</button>
+      </div>
+    </form>
+    
+    
+    <br>
+    <p>Already a User? <a href="/login">Login</a></p>
+    <script>
+      let s=document.getElementById("Current_Weight")
+      let t=document.getElementById("currWeight")
+      s.addEventListener("change", (evt)=>{
+        t.innerHTML = `${evt.srcElement.value}`;
+      })
+     </script>
+  </body>
+</html>
